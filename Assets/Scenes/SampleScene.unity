@@ -1658,7 +1658,41 @@ MonoBehaviour:
   childPrefab3: {fileID: 3196208796172837067, guid: 81f48aa87b7bba4418abf9be0141fb11, type: 3}
   babySpawnPoint: {fileID: 1632522156}
   mutationChance: 0.5
-  mutationStatTemplate: {fileID: 752844707}
+  mutationStatTemplate: {fileID: 0}
+  smallMutation: {x: 0.7, y: 0.7, z: 0.7}
+  largeMutation: {x: 1.5, y: 1.5, z: 1.5}
+  giantMutation: {x: 2, y: 2, z: 2}
+  redMutation: {r: 1, g: 0, b: 0, a: 1}
+  blueMutation: {r: 0, g: 0, b: 1, a: 1}
+  greenMutation: {r: 0, g: 1, b: 0, a: 1}
+  yellowMutation: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  purpleMutation: {r: 1, g: 0, b: 1, a: 1}
+--- !u!114 &730532573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730532570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386dac870cdafe640b0f5c1ce31827dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Breeding Room
+  movePoint: {fileID: 1520197978}
+  children: []
+  creatureCap: 2
+  breedingDelay: 5
+  delayText: {fileID: 613507537}
+  resultText: {fileID: 313453028}
+  uiPanel: {fileID: 3714445}
+  childPrefab1: {fileID: 3196208796172837067, guid: 81f48aa87b7bba4418abf9be0141fb11, type: 3}
+  childPrefab2: {fileID: 1003086518409698029, guid: 1a2c7cf019ce5f646bfb9c517bb3a3db, type: 3}
+  childPrefab3: {fileID: 7960830357740165248, guid: b881671a2a435a042a696a703e330198, type: 3}
+  babySpawnPoint: {fileID: 1632522156}
+  mutationChance: 0.5
+  mutationStatTemplate: {fileID: 5933097018538813945, guid: 81f48aa87b7bba4418abf9be0141fb11, type: 3}
   smallMutation: {x: 0.7, y: 0.7, z: 0.7}
   largeMutation: {x: 1.5, y: 1.5, z: 1.5}
   giantMutation: {x: 2, y: 2, z: 2}
@@ -1715,55 +1749,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733702815}
   m_CullTransparentMesh: 1
---- !u!1 &752844705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 752844706}
-  - component: {fileID: 752844707}
-  m_Layer: 7
-  m_Name: Mutation Stat Template
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &752844706
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752844705}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 730532571}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &752844707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752844705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 104d390e0ff8b914792d57821f4ac299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trait:
-    name: Speed
-    value: 6
-    maxValue: 6
-    description: How fast the cryptid can travel.
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,13 +2460,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1083646764693626172, guid: 374e09e8dfe2cc646a0c460d77ea8e56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1632522156}
-    - targetCorrespondingSourceObject: {fileID: 1083646764693626172, guid: 374e09e8dfe2cc646a0c460d77ea8e56, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 752844706}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 306863048845477766, guid: 374e09e8dfe2cc646a0c460d77ea8e56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 730532572}
+    - targetCorrespondingSourceObject: {fileID: 306863048845477766, guid: 374e09e8dfe2cc646a0c460d77ea8e56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730532573}
   m_SourcePrefab: {fileID: 100100000, guid: 374e09e8dfe2cc646a0c460d77ea8e56, type: 3}
 --- !u!1 &1747185424
 GameObject:
